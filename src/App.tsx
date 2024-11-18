@@ -1,7 +1,7 @@
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import Gallery from "./components/Gallery.tsx";
+import Gallery, { Profile } from "./components/Gallery.tsx";
 
 function App() {
   return (
@@ -15,6 +15,8 @@ function App() {
         </a>
       </div>
       <Gallery />
+      <h2>Profile</h2>
+      <Profile />
     </>
   );
 }

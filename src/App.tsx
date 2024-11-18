@@ -1,7 +1,8 @@
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import Gallery, { Profile } from "./components/Gallery.tsx";
+import Gallery from "./components/Gallery.tsx";
+import Profile from "./components/Profile.tsx";
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import { Person } from "./Person.ts";
 
-export function getImageUrl(person: Person) {
-  return "https://i.imgur.com/" + person.imageId + person.imageSize + ".jpg";
+export function getImageUrl({ imageId, imageSize = "s" }: Person) {
+  return "https://i.imgur.com/" + imageId + imageSize + ".jpg";
 }

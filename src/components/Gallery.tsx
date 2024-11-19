@@ -2,11 +2,31 @@ import Profile from "./Profile.tsx";
 
 export default function Gallery() {
   return (
-    <section>
-      <h1>Amazing scientists</h1>
-      <Profile />
-      <Profile />
-      <Profile />
-    </section>
+    <div>
+      <h1>Notable Scientists</h1>
+      <Profile
+        person={{
+          name: "Maria Skłodowska-Curie",
+          profession: "physicist and chemist",
+          awards: [
+            "Nobel Prize in Physics",
+            "Nobel Prize in Chemistry",
+            "Davy Medal",
+            "Matteucci Medal",
+          ],
+          discover: "polonium (chemical element)",
+          imageId: "szV5sdG",
+        }}
+      />
+      <Profile
+        person={{
+          name: "Katsuko Saruhashi",
+          profession: "geochemist",
+          awards: ["Miyake Prize for geochemistry", "Tanaka Prize"],
+          discover: "a method for measuring carbon dioxide in seawater",
+          imageId: "YfeOqp2",
+        }}
+      />
+    </div>
   );
 }

@@ -18,30 +18,28 @@ function Avatar({ person, size }: AvatarProps) {
   );
 }
 
-export default function Profile() {
+interface ProfileProps {
+  person: Person;
+}
+
+export default function Profile({ person }: ProfileProps) {
   return (
-    <div>
-      <Avatar
-        size={100}
-        person={{
-          name: "Katsuko Saruhashi",
-          imageId: "YfeOqp2",
-        }}
-      />
-      <Avatar
-        size={80}
-        person={{
-          name: "Aklilu Lemma",
-          imageId: "OKS67lh",
-        }}
-      />
-      <Avatar
-        size={50}
-        person={{
-          name: "Lin Lanying",
-          imageId: "1bX5QH6",
-        }}
-      />
-    </div>
+    <section className="profile">
+      <h2>{person.name}</h2>
+      <Avatar person={person} size={70} />
+      <ul>
+        <li>
+          <b>Profession: </b>
+          {person.profession}
+        </li>
+        <li>
+          <b>Awards: {person.awards.length} </b>({person.awards.join(", ")})
+        </li>
+        <li>
+          <b>Discovered: </b>
+          {person.discover}
+        </li>
+      </ul>
+    </section>
   );
 }

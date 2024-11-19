@@ -1,6 +1,8 @@
 interface DrinkProps {
-  name: string;
+  name: DrinkName;
 }
+
+type DrinkName = "tea" | "coffee";
 
 interface DrinkData {
   part: string;
@@ -8,7 +10,7 @@ interface DrinkData {
   age: string;
 }
 
-const drinks: Record<string, DrinkData> = {
+const drinks: Record<DrinkName, DrinkData> = {
   tea: {
     part: "leaf",
     caffeine: "15–70 mg/cup",

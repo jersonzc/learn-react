@@ -4,6 +4,7 @@ import "./App.css";
 import Gallery from "./components/Gallery.tsx";
 import Bio from "./components/Bio.tsx";
 import PackingList from "./components/PackingList.tsx";
+import DrinkList from "./components/DrinkList.tsx";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
       <Bio />
       <h2>PackingList</h2>
       <PackingList />
+      <h2>DrinkList</h2>
+      <DrinkList />
     </>
   );
 }

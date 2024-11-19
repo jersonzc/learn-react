@@ -7,7 +7,7 @@ interface ItemProps {
 function Item({ name, importance }: ItemProps) {
   return (
     <li className="item">
-      {name} <i>{importance != 0 && "(Importance:" + importance + ")"}</i>
+      {name} <i>{importance != 0 && "(Importance: " + importance + ")"}</i>
     </li>
   );
 }

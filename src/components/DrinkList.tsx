@@ -2,27 +2,38 @@ interface DrinkProps {
   name: string;
 }
 
-function Drink({ name }: DrinkProps) {
-  let kind: string = "leaf";
-  let size: string = "15–70 mg/cup";
-  let age: string = "4,000+ years";
+interface DrinkData {
+  part: string;
+  caffeine: string;
+  age: string;
+}
 
-  if (name !== "tea") {
-    kind = "bean";
-    size = "80–185 mg/cup";
-    age = "1,000+ years";
-  }
+const drinks: Record<string, DrinkData> = {
+  tea: {
+    part: "leaf",
+    caffeine: "15–70 mg/cup",
+    age: "4,000+ years",
+  },
+  coffee: {
+    part: "bean",
+    caffeine: "80–185 mg/cup",
+    age: "1,000+ years",
+  },
+};
+
+function Drink({ name }: DrinkProps) {
+  const info = drinks[name];
 
   return (
     <section>
       <h1>{name}</h1>
       <dl>
         <dt>Part of plant</dt>
-        <dd>{kind}</dd>
+        <dd>{info.part}</dd>
         <dt>Caffeine content</dt>
-        <dd>{size}</dd>
+        <dd>{info.caffeine}</dd>
         <dt>Age</dt>
-        <dd>{age}</dd>
+        <dd>{info.age}</dd>
       </dl>
     </section>
   );

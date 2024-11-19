@@ -3,6 +3,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Gallery from "./components/Gallery.tsx";
 import Bio from "./components/Bio.tsx";
+import PackingList from "./components/PackingList.tsx";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       <Gallery />
       <h2>Bio</h2>
       <Bio />
+      <h2>PackingList</h2>
+      <PackingList />
     </>
   );
 }

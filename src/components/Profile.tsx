@@ -46,7 +46,8 @@ export default function Profile({ person }: ProfileProps) {
         </li>
       </ul>
       <div>
-        <Card title="Photo">
+        <Card>
+          <h2>Photo</h2>
           <img
             className="avatar"
             src="https://i.imgur.com/OKS67lhm.jpg"
@@ -55,7 +56,8 @@ export default function Profile({ person }: ProfileProps) {
             height={70}
           />
         </Card>
-        <Card title="About">
+        <Card>
+          <h2>About</h2>
           <p>
             Aklilu Lemma was a distinguished Ethiopian scientist who discovered
             a natural treatment to schistosomiasis.

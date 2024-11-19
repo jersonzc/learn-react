@@ -4,6 +4,7 @@ import "./App.css";
 import Gallery from "./components/Gallery.tsx";
 import Profile from "./components/Profile.tsx";
 import Bio from "./components/Bio.tsx";
+import TodoList from "./components/TodoList.tsx";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
       <Profile />
       <h2>Bio</h2>
       <Bio />
+      <h2>TodoList</h2>
+      <TodoList />
     </>
   );
 }

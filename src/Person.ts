@@ -6,6 +6,5 @@ export interface Person {
   awards: string[];
   discover: string;
   imageId: string;
-  imageSize?: string;
   theme?: React.CSSProperties;
 }

@@ -1,16 +1,20 @@
 import { getImageUrl } from "../utils.js";
 import { Person } from "../Person.ts";
 
+const SIZE_LIMIT = 90;
+
 interface AvatarProps {
   person: Person;
   size: number;
 }
 
 function Avatar({ person, size }: AvatarProps) {
+  const imageSize = size < SIZE_LIMIT ? "s" : "b";
+
   return (
     <img
       className="avatar"
-      src={getImageUrl(person)}
+      src={getImageUrl(person, imageSize)}
       alt={person.name}
       width={size}
       height={size}

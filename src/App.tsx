@@ -6,6 +6,7 @@ import Bio from "./components/Bio.tsx";
 import PackingList from "./components/PackingList.tsx";
 import DrinkList from "./components/DrinkList.tsx";
 import List from "./components/List.tsx";
+import RecipeList from "./components/RecipeList.tsx";
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
       <DrinkList />
       <h2>List</h2>
       <List />
+      <h2>RecipeList</h2>
+      <RecipeList />
     </>
   );
 }

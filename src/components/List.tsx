@@ -2,7 +2,12 @@ import { people } from "../data.ts";
 import { getImageUrl } from "../utils.ts";
 import { Person } from "../Person.ts";
 
-function generateList(title: string, people: Person[]) {
+interface ListSectionProps {
+  title: string;
+  people: Person[];
+}
+
+function ListSection({ title, people }: ListSectionProps) {
   const items = people.map((person: Person) => (
     <li key={person.id}>
       <img src={getImageUrl(person)} alt={person.name} />
@@ -26,15 +31,11 @@ export default function List() {
   const chemists = people.filter((person) => person.profession === "chemist");
   const others = people.filter((person) => person.profession !== "chemist");
 
-  const chemistsList = generateList("Chemists", chemists);
-
-  const othersList = generateList("Everyone Else", others);
-
   return (
     <article>
       <h1>Scientists</h1>
-      {chemistsList}
-      {othersList}
+      <ListSection title={"Chemists"} people={chemists} />
+      <ListSection title={"Everyone Else"} people={others} />
     </article>
   );
 }

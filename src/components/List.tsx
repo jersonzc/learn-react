@@ -8,21 +8,21 @@ interface ListSectionProps {
 }
 
 function ListSection({ title, people }: ListSectionProps) {
-  const items = people.map((person: Person) => (
-    <li key={person.id}>
-      <img src={getImageUrl(person)} alt={person.name} />
-      <p>
-        <b>{person.name}:</b>
-        {" " + person.profession + " "}
-        known for {person.accomplishment}
-      </p>
-    </li>
-  ));
-
   return (
     <div>
       <h2>{title}</h2>
-      <ul>{items}</ul>
+      <ul>
+        {people.map((person: Person) => (
+          <li key={person.id}>
+            <img src={getImageUrl(person)} alt={person.name} />
+            <p>
+              <b>{person.name}:</b>
+              {" " + person.profession + " "}
+              known for {person.accomplishment}
+            </p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

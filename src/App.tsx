@@ -5,6 +5,7 @@ import Gallery from "./components/Gallery.tsx";
 import Bio from "./components/Bio.tsx";
 import PackingList from "./components/PackingList.tsx";
 import DrinkList from "./components/DrinkList.tsx";
+import List from "./components/List.tsx";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
       <PackingList />
       <h2>DrinkList</h2>
       <DrinkList />
+      <h2>List</h2>
+      <List />
     </>
   );
 }

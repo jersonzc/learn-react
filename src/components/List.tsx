@@ -1,8 +1,9 @@
 import { people } from "../data.ts";
 import { getImageUrl } from "../utils.ts";
+import { Person } from "../Person.ts";
 
-export default function List() {
-  const listItems = people.map((person) => (
+function generateList(title: string, people: Person[]) {
+  const items = people.map((person: Person) => (
     <li key={person.id}>
       <img src={getImageUrl(person)} alt={person.name} />
       <p>
@@ -12,10 +13,28 @@ export default function List() {
       </p>
     </li>
   ));
+
+  return (
+    <div>
+      <h2>{title}</h2>
+      <ul>{items}</ul>
+    </div>
+  );
+}
+
+export default function List() {
+  const chemists = people.filter((person) => person.profession === "chemist");
+  const others = people.filter((person) => person.profession !== "chemist");
+
+  const chemistsList = generateList("Chemists", chemists);
+
+  const othersList = generateList("Everyone Else", others);
+
   return (
     <article>
       <h1>Scientists</h1>
-      <ul>{listItems}</ul>
+      {chemistsList}
+      {othersList}
     </article>
   );
 }

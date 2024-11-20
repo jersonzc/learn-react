@@ -28,14 +28,22 @@ function ListSection({ title, people }: ListSectionProps) {
 }
 
 export default function List() {
-  const chemists = people.filter((person) => person.profession === "chemist");
-  const others = people.filter((person) => person.profession !== "chemist");
+  const chemists: Person[] = [];
+  const everyoneElse: Person[] = [];
+
+  people.forEach((person) => {
+    if (person.profession === "chemist") {
+      chemists.push(person);
+    } else {
+      everyoneElse.push(person);
+    }
+  });
 
   return (
     <article>
       <h1>Scientists</h1>
       <ListSection title={"Chemists"} people={chemists} />
-      <ListSection title={"Everyone Else"} people={others} />
+      <ListSection title={"Everyone Else"} people={everyoneElse} />
     </article>
   );
 }

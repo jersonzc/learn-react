@@ -8,7 +8,7 @@ export default function Poem() {
         if (index === poem.lines.length - 1) {
           return (
             <Fragment key={index}>
-              <p key={index}>{line}</p>
+              <p>{line}</p>
             </Fragment>
           );
         }

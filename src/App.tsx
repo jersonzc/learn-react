@@ -7,6 +7,7 @@ import PackingList from "./components/PackingList.tsx";
 import DrinkList from "./components/DrinkList.tsx";
 import List from "./components/List.tsx";
 import RecipeList from "./components/RecipeList.tsx";
+import Poem from "./components/Poem.tsx";
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
       <List />
       <h2>RecipeList</h2>
       <RecipeList />
+      <h2>Poem</h2>
+      <Poem />
     </>
   );
 }

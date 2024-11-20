@@ -4,21 +4,12 @@ import { Fragment } from "react";
 export default function Poem() {
   return (
     <article>
-      {poem.lines.map((line, index) => {
-        if (index === poem.lines.length - 1) {
-          return (
-            <Fragment key={index}>
-              <p>{line}</p>
-            </Fragment>
-          );
-        }
-        return (
-          <Fragment key={index}>
-            <p>{line}</p>
-            <hr />
-          </Fragment>
-        );
-      })}
+      {poem.lines.map((line, index) => (
+        <Fragment key={index}>
+          <p>{line}</p>
+          {index !== poem.lines.length - 1 && <hr />}
+        </Fragment>
+      ))}
     </article>
   );
 }

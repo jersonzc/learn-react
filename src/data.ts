@@ -8,6 +8,7 @@ export const people: Person[] = [
     profession: "mathematician",
     accomplishment: "spaceflight calculations",
     imageId: "MK3eW3A",
+    awards: [],
   },
   {
     id: 1,
@@ -15,6 +16,7 @@ export const people: Person[] = [
     profession: "chemist",
     accomplishment: "discovery of Arctic ozone hole",
     imageId: "mynHUSa",
+    awards: [],
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ export const people: Person[] = [
     profession: "physicist",
     accomplishment: "electromagnetism theory",
     imageId: "bE7W1ji",
+    awards: [],
   },
   {
     id: 3,
@@ -30,6 +33,7 @@ export const people: Person[] = [
     accomplishment:
       "pioneering cortisone drugs, steroids and birth control pills",
     imageId: "IOjWm71",
+    awards: [],
   },
   {
     id: 4,
@@ -37,6 +41,7 @@ export const people: Person[] = [
     profession: "astrophysicist",
     accomplishment: "white dwarf star mass calculations",
     imageId: "lrWQx8l",
+    awards: [],
   },
 ];
 

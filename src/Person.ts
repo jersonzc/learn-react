@@ -4,7 +4,7 @@ export interface Person {
   id: number;
   name: string;
   profession: string;
-  awards?: string[];
+  awards: string[];
   discover?: string;
   accomplishment?: string;
   imageId: string;

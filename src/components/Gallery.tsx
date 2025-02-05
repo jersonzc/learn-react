@@ -6,6 +6,7 @@ export default function Gallery() {
       <h1>Notable Scientists</h1>
       <Profile
         person={{
+          id: 1,
           name: "Maria Skłodowska-Curie",
           profession: "physicist and chemist",
           awards: [
@@ -20,6 +21,7 @@ export default function Gallery() {
       />
       <Profile
         person={{
+          id: 2,
           name: "Katsuko Saruhashi",
           profession: "geochemist",
           awards: ["Miyake Prize for geochemistry", "Tanaka Prize"],

@@ -21,17 +21,11 @@ function App() {
         </a>
       </div>
       <Gallery />
-      <h2>Bio</h2>
       <Bio />
-      <h2>PackingList</h2>
       <PackingList />
-      <h2>DrinkList</h2>
       <DrinkList />
-      <h2>List</h2>
       <List />
-      <h2>RecipeList</h2>
       <RecipeList />
-      <h2>Poem</h2>
       <Poem />
     </>
   );

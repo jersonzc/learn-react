@@ -28,7 +28,7 @@ function Drink({ name }: DrinkProps) {
 
   return (
     <section>
-      <h1>{name}</h1>
+      <h2>{name}</h2>
       <dl>
         <dt>Part of plant</dt>
         <dd>{info.part}</dd>
@@ -44,6 +44,7 @@ function Drink({ name }: DrinkProps) {
 export default function DrinkList() {
   return (
     <div>
+      <h1>DrinkList</h1>
       <Drink name="tea" />
       <Drink name="coffee" />
     </div>

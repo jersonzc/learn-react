@@ -1,6 +1,7 @@
 import { getImageUrl } from "../../utils.ts";
 import { Person } from "../../Person.ts";
 import './index.css'
+import { ReactElement, useState } from "react";
 
 const SIZE_LIMIT = 90;
 
@@ -29,8 +30,8 @@ interface ProfileProps {
 
 export default function Profile({ person }: ProfileProps) {
   return (
-    <section className="profile">
-      <h2>{person.name}</h2>
+    <Panel>
+      <Header person={person} />
       <Avatar person={person} size={70} />
       <ul>
         <li>
@@ -45,6 +46,30 @@ export default function Profile({ person }: ProfileProps) {
           {person.discover}
         </li>
       </ul>
+    </Panel>
+  );
+}
+
+interface PanelProps {
+  children: ReactElement[];
+}
+
+function Panel({ children }: PanelProps) {
+  const [open, setOpen] = useState(true);
+  return (
+    <section className="panel">
+      <button onClick={() => setOpen(!open)}>
+        {open ? 'Collapse' : 'Expand'}
+      </button>
+      {open && children}
     </section>
   );
+}
+
+interface HeaderProps {
+  person: Person;
+}
+
+function Header({person}: HeaderProps) {
+  return <h2>{person.name}</h2>;
 }

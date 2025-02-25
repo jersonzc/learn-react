@@ -1,5 +1,4 @@
 import { Story } from "../../App.tsx";
-import './index.css'
 
 interface StoryTrayProps {
   stories: Story[]

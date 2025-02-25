@@ -1,5 +1,6 @@
-import { getImageUrl } from "../utils.js";
-import { Person } from "../Person.ts";
+import { getImageUrl } from "../../utils.ts";
+import { Person } from "../../Person.ts";
+import './index.css'
 
 const SIZE_LIMIT = 90;
 

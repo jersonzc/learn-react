@@ -1,4 +1,4 @@
-import Profile from "./Profile.tsx";
+import Profile from "./Profile";
 
 export default function Gallery() {
   return (

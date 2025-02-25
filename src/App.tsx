@@ -8,6 +8,7 @@ import DrinkList from "./components/DrinkList.tsx";
 import List from "./components/List.tsx";
 import RecipeList from "./components/RecipeList.tsx";
 import Poem from "./components/Poem.tsx";
+import Clock from "./components/Clock";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <List />
       <RecipeList />
       <Poem />
+      <Clock time={new Date()}/>
     </>
   );
 }
